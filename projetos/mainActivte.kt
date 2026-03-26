@@ -130,8 +130,8 @@ fun ScreenA(navController: NavController) {
                 containerColor = colorResource(R.color.button_primary),
                 contentColor = colorResource(R.color.white)
             ),
-            shape = RoundedCornerShape(12.dp),
-            modifier = Modifier.padding(vertical = 8.dp)
+            shape = RoundedCornerShape(12.dp),// deixa os cantos do botão arredondados
+            modifier = Modifier.padding(vertical = 8.dp)// adiciona espaço em cima e embaixo do botão
         ) {
             Text(
                 text = "Ver nossos produtos",
@@ -140,7 +140,6 @@ fun ScreenA(navController: NavController) {
         }
 
         // Botão para ir para a tela de contato.
-        // Aqui corrigi a navegação, pois antes ele mandava para ScreenB.
         Button(
             onClick = {
                 navController.navigate("screen_c")
@@ -169,7 +168,7 @@ fun ScreenB(navController: NavController) {
             .fillMaxSize()
             .padding(24.dp),
 
-        // Agora centraliza na vertical também para ficar mais bonito.
+        // Agora centraliza na vertical.
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
